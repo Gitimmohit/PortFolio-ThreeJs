@@ -9,21 +9,12 @@ const Bird = () => {
   const { actions } = useAnimations(animations, birdRef);
 
   useEffect(() => {
-    if (actions["Take 001"]) {
-      actions["Take 001"].play();
-    } else {
-      console.error('Action "Take 001" not found');
-    }
-  }, [actions]);
+    actions["Take 001"].play();
+  }, []);
 
-  useFrame((state) => {
-    if (!birdRef.current) return;
-
-    const { clock, camera } = state;
-    const elapsedTime = clock.getElapsedTime();
-
+  useFrame(({ clock, camera }) => {
     // Slow down the sine wave effect for y rotation
-    birdRef.current.rotation.y += Math.sin(elapsedTime * 0.5) * 0.1; // Adjusted factors to slow down
+    birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.1 + 2; // Adjusted factors to slow down
 
     // Slower position checks and rotation adjustments
     if (birdRef.current.position.x > camera.position.x + 10) {
@@ -33,13 +24,12 @@ const Bird = () => {
     }
 
     // Slowing down the incremental rotations
-    const rotationSpeed = 0.005; // Reduced rotation speed
     if (birdRef.current.rotation.y === 0) {
-      birdRef.current.rotation.x += rotationSpeed;
-      birdRef.current.rotation.z += rotationSpeed;
+      birdRef.current.position.x += 0.01;
+      birdRef.current.position.z -= 0.01;
     } else {
-      birdRef.current.rotation.x -= rotationSpeed;
-      birdRef.current.rotation.z += rotationSpeed;
+      birdRef.current.position.x -= 0.01;
+      birdRef.current.position.z += 0.01;
     }
   });
 
