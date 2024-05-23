@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import arrow from "../assets/icons/arrow.svg"
+
+
 
 const InfoBox = ({ text, link, btnText }) => {
-    return (
-      <div className="info-box">
-        <p>{text}</p>
-        <Link to={link}>{btnText}</Link>
-      </div>
-    );
-  };
+  return (
+    <div className="info-box">
+      <p className="font-medium sm:text-xl text-center">{text}</p>
+      <Link to={link} className='neo-brutalism-white neo-btn'>{btnText}
+
+        <img src={arrow} className="w-4 h-4 object-contain" />
+      </Link>
+    </div>
+  );
+};
 
 const renderContent = {
   1: (
@@ -27,15 +33,15 @@ const renderContent = {
   3: (
     <InfoBox
       text="worked with many company and Learning many things"
-      link="/about"
-      btnText="Learn More"
+      link="/projects"
+      btnText="Projects"
     />
   ),
   4: (
     <InfoBox
-      text="worked with many company and Learning many things"
-      link="/about"
-      btnText="Learn More"
+      text="need a project done or looking for a dev ? I'am just a few keystrokes away "
+      link="/contact"
+      btnText="Let's talks"
     />
   ),
 };
