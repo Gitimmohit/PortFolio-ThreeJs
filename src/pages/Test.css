@@ -1,0 +1,90 @@
+body {
+background-color: white;
+}
+
+
+.navbar_top {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.nav-item.active {
+    background-color: #97E7E1;
+    border-bottom: 2px solid blue;
+}
+
+
+
+.nav-item:hover {
+    background-color: #e0e0e0;
+}
+/* ============================================================ */
+
+.second-navbar {
+    background-color: white;
+    display: flex;
+    gap: 10px;
+    padding: 7px 0px 0px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.second-nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.second-nav-item.active {
+    border-bottom: 2px solid blue;
+    background-color: #E1F7F5;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.second-nav-item:hover {
+    background-color: #E1F7F5;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+
+
+
+/* =========================================================== */
+
+.sub-navbar {
+    background-color: white;
+    display: flex;
+    gap: 10px;
+    padding: 7px 0px 0px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sub-nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.sub-nav-item.active {
+    border-bottom: 2px solid blue;
+    background-color: #E1F7F5;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.sub-nav-item:hover {
+    background-color: #E1F7F5;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
